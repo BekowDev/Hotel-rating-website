@@ -1,22 +1,19 @@
 <template>
-    <div class="">
+    <div class="h-screen flex flex-col gap-3">
         <item-header />
-        <router-view class="pt-32"></router-view>
+        <router-view class="flex-1 overflow-y-auto" />
     </div>
 </template>
 <script>
-import ItemHeader from '@/components/ItemHeader.vue';
-import ItemSearch from '@/components/ItemSearch.vue';
+import ItemHeader from "@/components/ItemHeader.vue";
 
 export default {
     components: {
-        ItemHeader, ItemSearch
+        ItemHeader,
     },
     data() {
-        return {
-
-        }
-    }
-}
+        return {};
+    },
+};
 </script>
 <style scoped></style>
