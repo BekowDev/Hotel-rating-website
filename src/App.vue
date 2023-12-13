@@ -1,7 +1,7 @@
 <template>
-    <div class="h-screen flex flex-col gap-3">
+    <div class="h-screen flex flex-col relative">
         <item-header />
-        <router-view class="flex-1 overflow-y-auto" />
+        <router-view class="py-4 flex-1" />
     </div>
 </template>
 <script>
@@ -10,9 +10,6 @@ import ItemHeader from "@/components/ItemHeader.vue";
 export default {
     components: {
         ItemHeader,
-    },
-    data() {
-        return {};
     },
 };
 </script>

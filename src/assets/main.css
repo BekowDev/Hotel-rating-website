@@ -1,11 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-    overflow: hidden;
-}
-img {
-    display: block;
-    width: 100%;
-    height: 100%;
+
+@layer base {
+    :root {
+        --stop-scroll: hidden;
+        --stop-scroll-padding: 0px;
+        --fields-color: #f0f3f9;
+        --body-color: #e1e8fa;
+        --animation-speed: 0.3s;
+        --animation-page-speed: 1s;
+        --block-color: #ffffff;
+    }
+
+    body {
+        font-family: "Montserrat", sans-serif;
+        overflow-y: scroll;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    select {
+        width: fit-content;
+        background: none;
+        outline: none;
+        padding: 0;
+        margin: 0 -4px 0 0;
+        /* -webkit-appearance: none; */
+    }
+    input {
+        background: transparent;
+    }
+    input:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    button,
+    input,
+    select {
+        user-select: none;
+        outline: none;
+    }
+
+    input[type="checkbox"] {
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        width: 24px;
+        height: 24px;
+    }
+
+    button[disabled] {
+        opacity: 0.5;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+    .shadows {
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.249);
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }

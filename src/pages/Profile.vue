@@ -1,26 +1,42 @@
 <template>
-    <section class="h-full">
+    <section>
         <div class="container">
-            <div class="w-full flex flex-col gap-5 text-[18px]">
-                <button class="w-fit h-9 flex items-center justify-between gap-2">
-                    <div class="flex gap-2">
-                        <div class="w-[25px] h-[25px]">
-                            <img src="@/assets/icons/sign-dark.png"
-                                 alt="account-icon">
+            <div class="flex justify-center">
+                <div class="w-full flex flex-col gap-5 text-[18px] items-end">
+                    <button class="w-fit h-9 flex items-center justify-between gap-2"
+                            @click="signOut">
+                        <div class="flex gap-2">
+                            Sign out
+                            <div class="w-[25px] h-[25px]">
+                                <img src="@/assets/icons/sign-dark.png"
+                                     alt="account-icon"
+                                     class="icon" />
+                            </div>
                         </div>
-                        Sign out
-                    </div>
-                </button>
-                <button class="h-9 px-3 text-red-500 absolute bottom-4 text-[16px]">
-                    Delete your account
-                </button>
+                    </button>
+                    <button class="w-fit text-red-500"
+                            @click="deleteAccount">
+                        Delete account
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 </template>
 <script>
 export default {
+    methods: {
+        signOut() {
+            localStorage.clear()
+            location.reload();
+        },
+        deleteAccount() {
+            const result = confirm("Delete your account?");
 
-}
+            if (result)
+                this.$store.dispatch('authModule/deleteAccount')
+        }
+    }
+};
 </script>
-<style></style>
+<style scoped></style>

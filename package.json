@@ -1,23 +1,25 @@
 {
-  "name": "hotelrating",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "vue": "^3.3.4",
-    "vue-router": "^4.2.5",
-    "vuex": "^4.0.2"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^4.4.0",
-    "@vitejs/plugin-vue-jsx": "^3.0.2",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.5",
-    "vite": "^4.4.11"
-  }
+    "name": "hotelrating",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "axios": "^1.6.2",
+        "swiper": "^11.0.5",
+        "vue": "^3.3.4",
+        "vue-router": "^4.2.5",
+        "vuex": "^4.0.2"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^4.4.0",
+        "@vitejs/plugin-vue-jsx": "^3.0.2",
+        "autoprefixer": "^10.4.16",
+        "postcss": "^8.4.31",
+        "tailwindcss": "^3.3.5",
+        "vite": "^4.4.11"
+    }
 }
