@@ -29,10 +29,12 @@ export const authModule = {
     actions: {
         async signUp({ state }) {
             try {
-                await AuthAPI.signUp({
+                const res = await AuthAPI.signUp({
                     username: state.username,
                     password: state.password,
                 });
+                alert(res.data.message);
+                window.location.href = "/login";
             } catch (error) {
                 console.error("POST request Error:", error);
             }
@@ -45,6 +47,7 @@ export const authModule = {
                 });
                 commit("setToken", res.data.token);
                 commit("setName", res.data.username);
+                window.location.href = "/";
             } catch (error) {
                 console.error("POST request Error:", error);
             }
