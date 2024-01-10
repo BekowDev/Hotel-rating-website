@@ -5,7 +5,7 @@
             <div class="flex justify-between flex-col items-center gap-2 sm:flex-row">
                 <router-link to="/"
                              class="font-black text-3xl text-[#d23350]">
-                    Hotel.io
+                    QonaqÚı
                 </router-link>
                 <nav
                      class="w-full sm:w-fit flex justify-center gap-6 overflow-x-auto px-4 l sm:px-0 lg:justify-end font-medium">

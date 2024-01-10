@@ -4,8 +4,10 @@
             <div class="h-full flex flex-col gap-5 sm:items-center pb-4">
                 <ItemSearch />
                 <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4">
-                    <Item-Hotel v-for="hotel in allHotels"
-                                :hotel="hotel" />
+                    <TransitionGroup name="transition">
+                        <Item-Hotel v-for="hotel in allHotels"
+                                    :hotel="hotel" />
+                    </TransitionGroup>
                 </div>
                 <PageButtons v-if="$store.state.searchModule.hotels.length != 0"
                              class="mt-auto" />
@@ -34,6 +36,31 @@ export default {
 };
 </script>
 <style scoped>
+.transition {
+    /* position: relative; */
+    padding: 0;
+}
+
+.transition-move,
+.transition-enter-active,
+.transition-leave-active {
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.transition-enter-from {
+    opacity: 0;
+    transform: translate(0, 165px);
+}
+
+.transition-leave-to {
+    opacity: 0;
+    transform: translate(0, 165px);
+}
+
+.transition-leave-active {
+    /* position: absolute; */
+}
+
 .item::-webkit-scrollbar {
     display: none;
 }

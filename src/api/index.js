@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// const urls = "http://172.20.10.2:5000/api";
-const urls = "http://192.168.1.72:5000/api";
+const urls = "http://172.20.10.2:5000/api";
+// const urls = "http://192.168.1.72:5000/api";
 
 const defaultConfig = {
     baseURL: urls,

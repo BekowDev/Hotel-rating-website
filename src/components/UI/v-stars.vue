@@ -1,9 +1,9 @@
 <template>
     <div class="text-orange-400 flex items-center gap-1">
-        <a class="font-medium text-sm">
+        <a class="font-medium text-[12px]">
             {{ reviews }} reviews
         </a>
-        <div class="text-xl -my-4">
+        <div class="text-lg -my-4">
             <span v-if="stars > 0">&#9733;</span>
             <span v-else>&#9734;</span>
             <span v-if="stars > 1">&#9733;</span>

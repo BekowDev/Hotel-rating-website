@@ -1,7 +1,7 @@
 <template>
     <a @click="$router.push(`/hotel/${hotel._id}`)"
        class="w-full rounded-[12px] flex flex-col overflow-hidden border-[1px] shadow-md cursor-pointer">
-        <div class="">
+        <div>
             <v-swiper :images="hotel.images" />
         </div>
         <div class="p-3">
@@ -10,7 +10,7 @@
                     {{ hotel.name }}
                 </div>
 
-                <div class="flex justify-between">
+                <div class="flex justify-between overflow-x-scroll hide-scroll-bar whitespace-nowrap">
                     <div>{{ hotel.type }}</div>
                     <v-stars :stars="hotel.stars"
                              :reviews="hotel.reviews" />
